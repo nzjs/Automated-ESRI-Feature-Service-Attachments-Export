@@ -20,6 +20,11 @@ If you have an Office 365 subscription and also wish to replicate image attachme
 - Simply use this C:\ path in the script parameters, and as long as OneDrive sync service is running on your server or machine, it will take care of the rest by adding new photos from this C:\ folder into your OneDrive/SharePoint Online location.
 - Example path: `C:\Users\<your user>\<Office 365 org name>\<folder name of SharePoint Online>`
 
+### How is this automated?
+To automate this process, simply add the Python script as a regular task (eg. daily) in your Task Scheduler application on a Windows device. 
+
+For Linux devices, you'll need to rewrite parts of the code to point to your respective `/home` location and create a daily CRON task.
+
 ### Sample output for a single FeatureService layer:
 ```
 Token generated: <AGOL token>
