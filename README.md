@@ -4,13 +4,22 @@ This script takes an input ESRI Feature Service, retrieves the online attachment
 
 Additionally, if you have setup a SharePoint Online location to "Sync" with a local C:\ drive location, the attachments can be automatically synced to O365 via the OneDrive Sync application. 
 
-# How to get it working
+### How to get started
 - Customise these variables in the code: 
 username, password, fs_base (base URL), outfolder_ (output location for images)
 - Customise the retrieveAttachments() function to use your variable names
 - Add more or remove FeatureService layer endpoints if required (script example comes with two)
 
-# Sample output for a single FeatureService layer:
+### How do I get the OneDrive/SharePoint Online part working?
+If you have an Office 365 subscription and also wish to replicate image attachments into a OneDrive folder or SharePoint Online library, this is what you need to do: 
+- Create the folder location on OneDrive/SharePoint Online
+- When viewing the folder contents, click the "Sync" button
+- The "Sync" process should now start between Office 365 and your machine
+- Now you effectively have a C:\ drive location which is a live synced version of the OneDrive/SharePoint Online folder
+- Simply use this C:\ path in the script parameters, and as long as OneDrive sync service is running on your server, it will take care of the rest by adding new photos from this C:\ folder into your OneDrive/SharePoint Online location.
+- Example path: `C:\Users\<your user>\<Office 365 org name>\<folder name of SharePoint Online>`
+
+### Sample output for a single FeatureService layer:
 ```
 Token generated: <AGOL token>
 
