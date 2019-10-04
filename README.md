@@ -1,4 +1,4 @@
-## Survey123 Attachments Export
+## Automated ESRI Feature Service Attachments Export
 This script takes an input ESRI Feature Service, retrieves the online attachments, and stores them on a local server if they don't already exist (only download the latest images). It's also compatible with privately shared services by generating an ESRI token during runtime.
 
 Additionally, if you have setup a SharePoint Online location to "Sync" with a local C:\ drive location, the attachments can be automatically synced to O365 via the OneDrive Sync application. 
